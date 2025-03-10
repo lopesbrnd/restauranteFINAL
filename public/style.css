@@ -1,0 +1,304 @@
+/* Corpo da página */
+@font-face {
+    font-family: 'Gagalin';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gagalin'), url('https://fonts.cdnfonts.com/s/57473/Gagalin-Regular.woff') format('woff');
+}
+body {
+    font-family: Gagalin, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+    
+}
+
+.header-image {
+    width: 1920px;
+    height: 140px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 140px;
+    margin-bottom: 20px;
+}
+
+.link-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom:100px;
+    font-size: 40px;
+    background: linear-gradient(to bottom, #FFF9B1, rgb(238, 247, 194), #FFF9B1);
+}
+
+.link-box {
+    width: 420px;
+    height: 120px;
+    border: 1px solid #000;
+    text-align: center;
+    line-height: 120px;
+    cursor: pointer;
+    color:#000
+    
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1320px;
+}
+
+.text-box {
+    width: 1000px;
+    height: 360px;
+    border: 0px solid #000;
+    text-align: left;
+    line-height: 1;
+    font-size: 75px;
+    margin-right:200px;
+    margin-top:110px;
+}
+
+.video-box {
+    width: 500px;
+    height: 500px;
+    border: 0px solid #000;
+    text-align: center;
+    line-height: 500px;
+    margin-bottom:50px
+}
+
+/* Título principal */
+
+
+h2 {
+    font-family: 'Century Gothic', Courier, monospace;
+    color: #333;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 20px;  /* Adiciona uma margem superior */
+}
+/* Estilo do parágrafo */
+b {
+    font-family: 'Arial', Courier, monospace;
+    margin-top: 20px ;
+}
+
+/* Estilo para o botão circular de seleção */
+button.select-btn {
+    background-color: #ddd;  /* Cor de fundo inicial */
+    border: none;
+    width: 30px;             /* Largura do botão */
+    height: 30px;            /* Altura do botão */
+    border-radius: 50%;      /* Torna o botão circular */
+    cursor: pointer;        /* Aponta para mão ao passar o mouse */
+    font-size: 16px;         /* Tamanho do ícone dentro do botão */
+    color: #333;             /* Cor do ícone */
+    display: inline-block;   /* Faz o botão e a quantidade ficarem na mesma linha */
+    transition: background-color 0.3s ease;  /* Efeito de transição suave ao clicar */
+}
+
+/* Estilo para o botão de seleção quando está ativo */
+button.select-btn.selected {
+    background-color: #4CAF50;  /* Cor verde quando selecionado */
+    color: white;               /* Cor branca no ícone */
+}
+
+/* Estilo para o campo de quantidade */
+.quantity-input {
+    display: inline-block;   /* Para aparecer na mesma linha */
+    margin-left: 10px;       /* Espaçamento entre o botão e a quantidade */
+    display: none;           /* Inicialmente oculto */
+}
+
+.quantity-input input {
+    width: 50px;             /* Largura do campo de quantidade */
+    padding: 5px;            /* Preenchimento interno */
+    text-align: center;      /* Alinha o número ao centro */
+    border: 1px solid #ccc; /* Borda suave */
+    border-radius: 5px;      /* Bordas arredondadas */
+}
+
+/* Estilo para as tabelas de pratos */
+.tabela_pratos {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Colapsa as bordas da tabela */
+}
+
+#tabela_pratos th, #tabela_pratos td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;  /* Borda leve para as células */
+    background: linear-gradient(to bottom, #FFF9B1, rgb(238, 247, 194), #FFF9B1);
+}
+
+#tabela_pratos th {
+    background-color: #f4f4f4;  /* Cor de fundo para o cabeçalho */
+}
+
+#tabela_pratos td {
+    background-color: #fff;   /* Cor de fundo para as células */
+}
+
+/* Estilo para a tabela de clientes e valores */
+#clientes_valor {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse; /* Colapsa as bordas da tabela */
+}
+
+#clientes_valor th, #clientes_valor td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;  /* Borda leve para as células */
+    background: linear-gradient(to bottom, #FFF9B1, rgb(238, 247, 194), #FFF9B1);
+}
+
+#clientes_valor th {
+    background-color: #f4f4f4;  /* Cor de fundo para o cabeçalho */
+    font-size: 1.2rem;         /* Tamanho maior para o cabeçalho */
+}
+
+#clientes_valor td {
+    background-color: #fff;   /* Cor de fundo para as células */
+    font-size: 1rem;           /* Tamanho da fonte padrão */
+}
+
+/* Botão de excluir na tabela de clientes */
+button.excluir-btn {
+    background-color: #f44336; /* Cor vermelha */
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button.excluir-btn:hover {
+    background-color: #d32f2f; /* Cor ao passar o mouse */
+}
+
+/* Melhorias na aparência de input e botões */
+input[type="text"], input[type="number"] {
+    width: 60%;               /* Diminui a largura dos inputs */
+    padding: 8px;             /* Reduz o padding */
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;         /* Diminui o tamanho da fonte */
+}
+
+select {
+    width: 60%;               /* Diminui a largura dos selects */
+    padding: 8px;             /* Reduz o padding */
+    margin: 5px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.9rem;         /* Diminui o tamanho da fonte */
+}
+
+/* Botão de finalizar */
+input[type="button"] {
+    background-color: #4CAF50;  /* Cor de fundo verde */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #45a049;  /* Cor ao passar o mouse */
+}
+
+/* Estilo das mesas */
+#mesas-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.mesa {
+    width: 80px;      /* Aumenta a largura do quadrado */
+    height: 80px;     /* Aumenta a altura do quadrado */
+    margin: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white; /* Para garantir que o texto seja visível */
+    font-weight: bold; /* Para deixar o texto mais destacado */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    font-family: 'Arial', Courier, monospace;
+}
+
+.disponivel {
+    background-color: green; /* Mesa disponível ficará verde */
+}
+
+.indisponivel {
+    background-color: red; /* Mesa indisponível ficará vermelha */
+}
+.fotos-funcionarios {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 100px;
+    font-size: 26px;
+}
+
+.foto-funcionarios {
+    width: 270px;
+    height: 345px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.foto-funcionarios figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.foto-funcionarios img {
+    border: 1px solid #000;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Faz com que a imagem se ajuste ao container, mesmo que distorça */
+}
+
+figcaption {
+    font-weight: bold;
+    color: #000000;
+    margin-top: 5px; /* Espaço entre a borda e o texto */
+}
+
+a:link { 
+    text-decoration: none; 
+  } 
+  a:visited { 
+    text-decoration: none; 
+  } 
+  a:hover { 
+    text-decoration: none; 
+  } 
+  a:active { 
+    text-decoration: none; 
+  }
